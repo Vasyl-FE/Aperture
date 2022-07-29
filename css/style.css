@@ -109,4 +109,4 @@ section p {
     color: #C0C0C0;
 }
 
-section div ol {list-style: none}
+section div ol {list-style: none; font-size: 80px; color: bisque;}
