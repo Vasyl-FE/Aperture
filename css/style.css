@@ -108,3 +108,5 @@ section p {
     line-height: 20px;
     color: #C0C0C0;
 }
+
+section div ol {list-style: none}
