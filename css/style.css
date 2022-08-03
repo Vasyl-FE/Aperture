@@ -15,10 +15,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
 
-body {font-family: Poppins, sans-serif;}
+body {
+    font-family: Poppins, sans-serif;
+}
 
 header {
     padding-top: 24px;
@@ -87,13 +88,14 @@ header ul li:last-of-type a {
     font-size: 16px;
 }
 
-section {
+.main_banner {
     background-image: url(../images/1st_section_background.jpg);
     background-size: cover;
     height: 100vh;
+    position: relative;
 }
 
-section div {
+.main_banner div {
     padding-top: 466px;
     padding-bottom: 71px;
     max-width: 580px;
@@ -101,28 +103,235 @@ section div {
     text-align: center;
 }
 
-section h2 {
+.main_banner h2 {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #C0C0C0;
     font-size: 14px;
     line-height: 20px;
+    font-weight: 400;
 }
 
-section h1 {
+.main_banner h1 {
     font-size: 54px;
     line-height: 59px;
     color: #FFFFFF;
+    font-weight: 400;
 }
 
-section p {
+.main_banner p {
+    margin-top: 18px;
     font-size: 14px;
     line-height: 20px;
     color: #C0C0C0;
 }
 
-section div ol {
-    list-style: none;
-    font-size: 80px;
-    color: bisque;
+.fixed_information li {
+    font-size: 12px;
+    line-height: 12px;
+    display: inline-flex;
+    margin-left: 16px;
+    color: #FFFFFF;
+}
+
+.fixed_information {
+    position: absolute;
+    bottom: 41px;
+    right: 40px;
+}
+
+.fixed_information li:first-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 15px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/clock.svg");
+}
+
+.fixed_information li:nth-child(2):before {
+    content: "";
+    margin-right: 6px;
+    width: 16px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/objective.svg");
+}
+
+.fixed_information li:nth-child(3):before {
+    content: "";
+    margin-right: 6px;
+    width: 32px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/iso.svg");
+}
+
+.fixed_information li:last-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 10px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/geo.svg");
+}
+
+.past_clients {
+    background-color: #000000;
+    text-align: center;
+    padding-top: 113px;
+    padding-bottom: 140px;
+}
+
+.past_clients h3 {
+    font-size: 40px;
+    line-height: 42px;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.past_clients h4 {
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 30px;
+    color: #C0C0C0;
+    font-weight: 400;
+}
+
+.past_clients div {
+    padding-top: 82px;
+    display: flex;
+    max-width: 820px;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.getintouch-section {
+    background-color: #000000;
+    padding-top: 113px;
+    padding-bottom: 108px;
+    text-align: center;
+}
+
+.getintouch-section h3 {
+    font-size: 40px;
+    line-height: 42px;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.getintouch-section h4 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #C0C0C0;
+    margin-top: 15px;
+    margin-bottom: 22px;
+    font-weight: 400;
+}
+
+.getintouch-section a {
+    display: inline-flex;
+    border-radius: 14px;
+    background: #FFFFFF;
+    text-decoration: none;
+}
+
+.getintouch-section span {
+    color: #000000;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    padding-top: 9px;
+    padding-right: 10px;
+    padding-bottom: 13px;
+}
+
+.getintouch-section a:before {
+    content: "";
+    background-image: url("../images/dot.svg");
+    height: 32px;
+    width: 32px;
+    margin: 5px 6px 5px 4px;
+}
+
+.himalayas-section {
+    background-image: url(../images/mtn_banner.jpg);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+
+.himalayas-section div {
+    padding-top: 250px;
+    padding-bottom: 250px;
+    max-width: 254px;
+    position: absolute;
+    right: 119px;
+}
+
+.himalayas-section h5 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.himalayas-section p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #C0C0C0;
+}
+
+.fixed_information-2 li {
+    font-size: 12px;
+    line-height: 12px;
+    display: inline-flex;
+    margin-left: 16px;
+    color: #FFFFFF;
+}
+
+.fixed_information-2 {
+    position: absolute;
+    bottom: 41px;
+    right: 40px;
+}
+
+.fixed_information-2 li:first-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 15px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/clock.svg");
+}
+
+.fixed_information-2 li:nth-child(2):before {
+    content: "";
+    margin-right: 6px;
+    width: 16px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/objective.svg");
+}
+
+.fixed_information-2 li:nth-child(3):before {
+    content: "";
+    margin-right: 6px;
+    width: 32px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/iso.svg");
+}
+
+.fixed_information-2 li:last-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 10px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/geo.svg");
 }
