@@ -93,13 +93,14 @@ header ul li:last-of-type a {
     background-size: cover;
     height: 100vh;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 71px;
 }
 
-.main_banner div {
-    padding-top: 466px;
-    padding-bottom: 71px;
+.main_banner_general-text {
     max-width: 580px;
-    margin: auto;
     text-align: center;
 }
 
@@ -126,7 +127,7 @@ header ul li:last-of-type a {
     color: #C0C0C0;
 }
 
-.fixed_information li {
+.photo_info_main_banner li {
     font-size: 12px;
     line-height: 12px;
     display: inline-flex;
@@ -134,13 +135,13 @@ header ul li:last-of-type a {
     color: #FFFFFF;
 }
 
-.fixed_information {
+.photo_info_main_banner {
     position: absolute;
     bottom: 41px;
     right: 40px;
 }
 
-.fixed_information li:first-of-type:before {
+.photo_info_main_banner li:first-of-type:before {
     content: "";
     margin-right: 6px;
     width: 15px;
@@ -149,7 +150,7 @@ header ul li:last-of-type a {
     background-image: url("../images/clock.svg");
 }
 
-.fixed_information li:nth-child(2):before {
+.photo_info_main_banner li:nth-child(2):before {
     content: "";
     margin-right: 6px;
     width: 16px;
@@ -158,7 +159,7 @@ header ul li:last-of-type a {
     background-image: url("../images/objective.svg");
 }
 
-.fixed_information li:nth-child(3):before {
+.photo_info_main_banner li:nth-child(3):before {
     content: "";
     margin-right: 6px;
     width: 32px;
@@ -167,7 +168,7 @@ header ul li:last-of-type a {
     background-image: url("../images/iso.svg");
 }
 
-.fixed_information li:last-of-type:before {
+.photo_info_main_banner li:last-of-type:before {
     content: "";
     margin-right: 6px;
     width: 10px;
@@ -175,6 +176,165 @@ header ul li:last-of-type a {
     height: 16px;
     background-image: url("../images/geo.svg");
 }
+
+.fuji-section {
+    background-image: url(../images/fuji_banner.jpg);
+    background-size: cover;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 62px;
+}
+
+.fuji-section_general_text {
+    max-width: 298px;
+    line-height: 20px;
+}
+
+.fuji-section h5 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.fuji-section p {
+    font-size: 14px;
+    color: #C0C0C0;
+}
+
+.photo_info_fuji li {
+    font-size: 12px;
+    line-height: 12px;
+    display: inline-flex;
+    margin-left: 16px;
+    color: #FFFFFF;
+}
+
+.photo_info_fuji {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.photo_info_fuji li:first-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 15px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/clock.svg");
+}
+
+.photo_info_fuji li:nth-child(2):before {
+    content: "";
+    margin-right: 6px;
+    width: 16px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/objective.svg");
+}
+
+.photo_info_fuji li:nth-child(3):before {
+    content: "";
+    margin-right: 6px;
+    width: 32px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/iso.svg");
+}
+
+.photo_info_fuji li:last-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 10px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/geo.svg");
+}
+
+.monstera-section {
+    background-image: url(../images/monstera_banner.jpg);
+    background-size: cover;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 87px;
+}
+
+.monstera-section_general_text {
+    max-width: 273px;
+    line-height: 20px;
+}
+
+.monstera-section h5 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.monstera-section p {
+    font-size: 14px;
+    color: #C0C0C0;
+}
+
+.photo_info_monstera li {
+    font-size: 12px;
+    line-height: 12px;
+    display: inline-flex;
+    margin-left: 16px;
+    color: #FFFFFF;
+}
+
+.photo_info_monstera {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.photo_info_monstera li:first-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 15px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/clock.svg");
+}
+
+.photo_info_monstera li:nth-child(2):before {
+    content: "";
+    margin-right: 6px;
+    width: 16px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/objective.svg");
+}
+
+.photo_info_monstera li:nth-child(3):before {
+    content: "";
+    margin-right: 6px;
+    width: 32px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/iso.svg");
+}
+
+.photo_info_monstera li:last-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 10px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/geo.svg");
+}
+
 
 .past_clients {
     background-color: #000000;
@@ -205,6 +365,85 @@ header ul li:last-of-type a {
     align-items: center;
     justify-content: space-between;
     margin: auto;
+}
+
+.himalayas-section {
+    background-image: url(../images/himalayas_banner.jpg);
+    background-size: cover;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 119px;
+}
+
+.himalayas-section_general_text {
+    max-width: 254px;
+    line-height: 20px;
+}
+
+.himalayas-section h5 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.himalayas-section p {
+    font-size: 14px;
+    color: #C0C0C0;
+}
+
+.photo_info_himalayas li {
+    font-size: 12px;
+    line-height: 12px;
+    display: inline-flex;
+    margin-left: 16px;
+    color: #FFFFFF;
+}
+
+.photo_info_himalayas {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.photo_info_himalayas li:first-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 15px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/clock.svg");
+}
+
+.photo_info_himalayas li:nth-child(2):before {
+    content: "";
+    margin-right: 6px;
+    width: 16px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/objective.svg");
+}
+
+.photo_info_himalayas li:nth-child(3):before {
+    content: "";
+    margin-right: 6px;
+    width: 32px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/iso.svg");
+}
+
+.photo_info_himalayas li:last-of-type:before {
+    content: "";
+    margin-right: 6px;
+    width: 10px;
+    display: block;
+    height: 16px;
+    background-image: url("../images/geo.svg");
 }
 
 .getintouch-section {
@@ -256,82 +495,6 @@ header ul li:last-of-type a {
     margin: 5px 6px 5px 4px;
 }
 
-.himalayas-section {
-    background-image: url(../images/mtn_banner.jpg);
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-}
 
-.himalayas-section div {
-    padding-top: 250px;
-    padding-bottom: 250px;
-    max-width: 254px;
-    position: absolute;
-    right: 119px;
-}
 
-.himalayas-section h5 {
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-}
 
-.himalayas-section p {
-    font-size: 14px;
-    line-height: 20px;
-    color: #C0C0C0;
-}
-
-.fixed_information-2 li {
-    font-size: 12px;
-    line-height: 12px;
-    display: inline-flex;
-    margin-left: 16px;
-    color: #FFFFFF;
-}
-
-.fixed_information-2 {
-    position: absolute;
-    bottom: 41px;
-    right: 40px;
-}
-
-.fixed_information-2 li:first-of-type:before {
-    content: "";
-    margin-right: 6px;
-    width: 15px;
-    display: block;
-    height: 16px;
-    background-image: url("../images/clock.svg");
-}
-
-.fixed_information-2 li:nth-child(2):before {
-    content: "";
-    margin-right: 6px;
-    width: 16px;
-    display: block;
-    height: 16px;
-    background-image: url("../images/objective.svg");
-}
-
-.fixed_information-2 li:nth-child(3):before {
-    content: "";
-    margin-right: 6px;
-    width: 32px;
-    display: block;
-    height: 16px;
-    background-image: url("../images/iso.svg");
-}
-
-.fixed_information-2 li:last-of-type:before {
-    content: "";
-    margin-right: 6px;
-    width: 10px;
-    display: block;
-    height: 16px;
-    background-image: url("../images/geo.svg");
-}
