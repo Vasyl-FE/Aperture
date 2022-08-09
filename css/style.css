@@ -474,17 +474,12 @@ header ul li:last-of-type a {
     border-radius: 14px;
     background: #FFFFFF;
     text-decoration: none;
-}
-
-.getintouch-section span {
+    align-items: center;
     color: #000000;
     font-size: 16px;
     line-height: 20px;
     letter-spacing: 0.4px;
-    text-decoration: none;
-    padding-top: 9px;
     padding-right: 10px;
-    padding-bottom: 13px;
 }
 
 .getintouch-section a:before {
