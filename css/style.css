@@ -487,7 +487,7 @@ header ul li:last-of-type a {
 .owl-nav .owl-prev {
     position: absolute;
     left: 0;
-    top: 63px;
+    top: 106px;
 }
 
 .owl-prev:before {
@@ -502,10 +502,10 @@ header ul li:last-of-type a {
 .owl-nav .owl-next {
     position: absolute;
     right: 0;
-    top: 63px;
+    top: 106px;
 }
 
-.owl-nav .owl-next {
+.owl-nav .owl-next:before {
     color: white;
     font-size: 30px;
     font-family: "Font Awesome 6 Free", sans-serif;
