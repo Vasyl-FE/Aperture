@@ -442,6 +442,7 @@ header ul li:last-of-type a {
     background-image: url("../images/geo.svg");
 }
 
+/*.................*/
 
 .past_clients {
     background-color: #000000;
@@ -465,14 +466,55 @@ header ul li:last-of-type a {
     font-weight: 400;
 }
 
-.past_clients .clients_logos {
+.clients_logos {
     padding-top: 82px;
-    display: flex;
     max-width: 1168px;
-    align-items: center;
-    justify-content: space-between;
     margin: auto;
 }
+
+.clients_logos a {
+    max-width: 128px;
+    display: inline-block;
+}
+
+.owl-stage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.owl-nav .owl-prev {
+    position: absolute;
+    left: 0;
+    top: 63px;
+}
+
+.owl-prev:before {
+    color: white;
+    font-size: 30px;
+    font-family: "Font Awesome 6 Free", sans-serif;
+    content: "\f053";
+    font-weight: 900;
+
+}
+
+.owl-nav .owl-next {
+    position: absolute;
+    right: 0;
+    top: 63px;
+}
+
+.owl-nav .owl-next {
+    color: white;
+    font-size: 30px;
+    font-family: "Font Awesome 6 Free", sans-serif;
+    content: "\f054";
+    font-weight: 900;
+}
+
+/*.................*/
+
 
 .himalayas-section {
     background-image: url(../images/himalayas_banner.jpg);
@@ -727,3 +769,4 @@ footer p {
 .social-2 {
     margin-left: 20px;
 }
+
