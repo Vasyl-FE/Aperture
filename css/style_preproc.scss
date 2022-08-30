@@ -1,0 +1,14 @@
+@import "style.css";
+@import "media.css";
+
+$main_font: 'poppinsregular';
+$main_color: #000000;
+$white_color: #fff;
+
+@mixin max-screen($res)
+{
+  @media screen and (max-width: $res)
+  {
+    @content;
+  }
+}
