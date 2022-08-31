@@ -1,14 +1,103 @@
 @import "style.css";
 @import "media.css";
 
-$main_font: 'poppinsregular';
-$main_color: #000000;
-$white_color: #fff;
+$main_font: Poppins, sans-serif 14px/20px 400;
+$bg_color: #000000;
+$white_color: #FFFFFF;
+$grey_color: #C0C0C0;
 
-@mixin max-screen($res)
-{
-  @media screen and (max-width: $res)
-  {
-    @content;
-  }
+
+@mixin center-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+@mixin large-headings {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@mixin positioned_photo-info {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+}
+
+@mixin photo_info-text {
+  font-size: 12px;
+  line-height: 12px;
+  color: $white_color;
+}
+
+@mixin photo_info-icons_no_width {
+  content: "";
+  margin-right: 6px;
+  display: block;
+  height: 16px;
+}
+
+@mixin photo-sections {
+  background-size: cover;
+  min-height: 600px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+@mixin button {
+  display: inline-flex;
+  border-radius: 14px;
+  background: #FFFFFF;
+  text-decoration: none;
+  align-items: center;
+  color: #000000;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  padding-right: 10px;
+  transition: 0.2s;
+}
+
+@mixin button-dot {
+  content: "";
+  background-image: url("../images/dot.svg");
+  height: 32px;
+  width: 32px;
+  margin: 5px 6px 5px 4px;
+}
+
+@mixin carousel-arrows {
+  color: white;
+  font-size: 30px;
+  font-family: "Font Awesome 6 Free", sans-serif;
+  font-weight: 900;
+}
+
+@mixin arrows-y {
+  position: absolute;
+  top: 106px;
+}
+
+
+
+
+
+
+
+
+
+
+
+//ampersands for pseudoclasses or pseudoelements!
+
+
+//@mixin max-screen($res)
+//{
+//  @media screen and (max-width: $res)
+//  {
+//    @content;
+//  }
+//}

@@ -175,6 +175,12 @@ header {
     overflow: hidden;
     position: relative;
     margin-bottom: 16px;
+    width: 100%;
+    height: auto;
+}
+
+.what_we_do .d-flex {
+    flex-wrap: nowrap;
 }
 
 .what_we_do .item img {
@@ -396,7 +402,6 @@ header {
     background-image: url("../images/geo.svg");
 }
 
-/*.................*/
 
 .past_clients {
     background-color: #000000;
@@ -466,8 +471,6 @@ header {
     content: "\f054";
     font-weight: 900;
 }
-
-/*.................*/
 
 
 .himalayas-section {
@@ -737,15 +740,6 @@ footer p {
 .ui-accordion .ui-accordion-content {
     background-color: black;
     border: none;
-}
-
-.what_we_do .item {
-    width: 100%;
-    height: auto;
-}
-
-.what_we_do .d-flex {
-    flex-wrap: nowrap;
 }
 
 .ui-icon {
