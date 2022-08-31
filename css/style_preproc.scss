@@ -1,4 +1,16 @@
-@import "style.css";
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.eot');
+  src: url('../fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Poppins-Regular.woff2') format('woff2'),
+  url('../fonts/Poppins-Regular.woff') format('woff'),
+  url('../fonts/Poppins-Regular.ttf') format('truetype'),
+  url('../fonts/Poppins-Regular.svg#Poppins-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "media.css";
 
 $main_font: Poppins, sans-serif 14px/20px 400;
@@ -28,6 +40,8 @@ $grey_color: #C0C0C0;
   font-size: 12px;
   line-height: 12px;
   color: $white_color;
+  display: inline-flex;
+  margin-left: 16px;
 }
 
 @mixin photo_info-icons_no_width {
@@ -46,29 +60,6 @@ $grey_color: #C0C0C0;
   align-items: center;
 }
 
-
-@mixin button {
-  display: inline-flex;
-  border-radius: 14px;
-  background: #FFFFFF;
-  text-decoration: none;
-  align-items: center;
-  color: #000000;
-  font-size: 16px;
-  line-height: 20px;
-  letter-spacing: 0.4px;
-  padding-right: 10px;
-  transition: 0.2s;
-}
-
-@mixin button-dot {
-  content: "";
-  background-image: url("../images/dot.svg");
-  height: 32px;
-  width: 32px;
-  margin: 5px 6px 5px 4px;
-}
-
 @mixin carousel-arrows {
   color: white;
   font-size: 30px;
@@ -82,15 +73,6 @@ $grey_color: #C0C0C0;
 }
 
 
-
-
-
-
-
-
-
-
-
 //ampersands for pseudoclasses or pseudoelements!
 
 
@@ -101,3 +83,501 @@ $grey_color: #C0C0C0;
 //    @content;
 //  }
 //}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+  z-index: 1;
+}
+
+header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-color: #181818;
+}
+
+.header_container {
+  max-width: 1150px;
+  margin: auto;
+  @include center-flex
+}
+
+.header_container-logo {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.main_banner {
+  background-image: url(../images/1st_section_background.jpg);
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 71px;
+
+  h2 {
+    @include large-headings;
+    color: $grey_color;
+    font: $main_font;
+  }
+
+  h1 {
+    font-size: 54px;
+    line-height: 59px;
+    color: $white_color;
+    font-weight: 400;
+  }
+
+  p {
+    margin-top: 18px;
+    font-size: 14px;
+    line-height: 20px;
+    color: $grey_color;
+  }
+}
+
+.main_banner_general-text {
+  max-width: 580px;
+  text-align: center;
+}
+
+.photo_info_main_banner, .photo_info_fuji, .photo_info_monstera, .photo_info_himalayas {
+  @include positioned_photo-info;
+
+  li {
+    @include photo_info-text;
+    color: $white_color;
+
+    &:first-of-type {
+      &:before {
+        @include photo_info-icons_no_width;
+        width: 15px;
+        background-image: url("../images/clock.svg");
+      }
+    }
+
+    &:nth-child(2) {
+      &:before {
+        @include photo_info-icons_no_width;
+        width: 16px;
+        background-image: url("../images/objective.svg");
+      }
+    }
+
+    &:nth-child(3) {
+      &:before {
+        @include photo_info-icons_no_width;
+        width: 32px;
+        background-image: url("../images/iso.svg");
+      }
+    }
+
+    &:last-of-type {
+      &:before {
+        @include photo_info-icons_no_width;
+        width: 10px;
+        background-image: url("../images/geo.svg");
+      }
+    }
+  }
+}
+
+.what_we_do_container {
+  max-width: 1168px;
+  margin: auto;
+}
+
+.what_we_do {
+  padding-top: 112px;
+  padding-bottom: 100px;
+  background-color: black;
+
+}
+
+
+.what_we_do h2 {
+  color: $white_color;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: center;
+}
+
+.what_we_do h3 {
+  margin-top: 15px;
+  margin-bottom: 42px;
+  color: $grey_color;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.what_we_do .item {
+  max-width: 576px;
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 16px;
+  width: 100%;
+  height: auto;
+}
+
+.what_we_do .d-flex {
+  @include center-flex;
+  flex-wrap: nowrap;
+}
+
+.what_we_do .item img {
+  display: block;
+  width: 100%;
+}
+
+.what_we_do .item .description {
+  font: $main_font;
+  position: absolute;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  bottom: 30px;
+}
+
+.what_we_do .item .description h4 {
+  @include large-headings;
+  color: $white_color;
+  margin-bottom: 30px;
+}
+
+.what_we_do .item .description p {
+  color: $grey_color;
+  margin-bottom: 17px;
+}
+
+.btn {
+  display: inline-flex;
+  border-radius: 14px;
+  background: $white_color;
+  text-decoration: none;
+  align-items: center;
+  color: $bg_color;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+  padding-right: 10px;
+  transition: 0.2s;
+}
+
+.btn:before {
+  content: "";
+  background-image: url("../images/dot.svg");
+  height: 32px;
+  width: 32px;
+  margin: 5px 6px 5px 4px;
+}
+
+.btn:hover {
+  transform: scale(1.1)
+}
+
+.btn:active {
+  transform: translate(1px);
+}
+
+
+.fuji-section {
+  background-image: url(../images/fuji_banner.jpg);
+  @include photo-sections;
+
+}
+
+.fuji-section_general_text {
+  max-width: 298px;
+  line-height: 20px;
+  margin-right: 62px;
+}
+
+.photo_info_fuji, .photo_info_monstera, .photo_info_himalayas {
+  h5 {
+    @include large-headings;
+    color: $white_color;
+    font: $main_font;
+  }
+
+  p {
+    font: $main_font;
+    color: $grey_color;
+  }
+}
+
+
+.monstera-section {
+  background-image: url(../images/monstera_banner.jpg);
+  @include photo-sections;
+}
+
+.monstera-section_general_text {
+  max-width: 273px;
+  line-height: 20px;
+  margin-right: 87px;
+}
+
+.past_clients {
+  background-color: $bg_color;
+  text-align: center;
+  padding-top: 113px;
+  padding-bottom: 140px;
+}
+
+.past_clients h3 {
+  font-size: 40px;
+  line-height: 42px;
+  color: $white_color;
+  font-weight: 400;
+}
+
+.past_clients h4 {
+  margin-top: 15px;
+  font-size: 24px;
+  line-height: 30px;
+  color: $grey_color;
+  font-weight: 400;
+}
+
+.clients_logos {
+  padding-top: 82px;
+  max-width: 1168px;
+  margin: auto;
+}
+
+.clients_logos a {
+  max-width: 128px;
+  display: inline-block;
+}
+
+.owl-stage {
+  @include center-flex;
+  text-align: center;
+}
+
+.owl-nav .owl-prev {
+  position: absolute;
+  left: 0;
+  top: 106px;
+}
+
+.owl-prev:before {
+  @include carousel-arrows;
+  content: "\f053";
+}
+
+.owl-nav .owl-next {
+  @include arrows-y;
+  right: 0;
+}
+
+.owl-nav .owl-next:before {
+  @include carousel-arrows;
+  content: "\f054";
+}
+
+
+.himalayas-section {
+  @include photo-sections;
+  background-image: url(../images/himalayas_banner.jpg);
+}
+
+.himalayas-section_general_text {
+  max-width: 254px;
+  line-height: 20px;
+  margin-right: 119px;
+}
+
+.getintouch-section {
+  background-color: $bg_color;
+  padding-top: 113px;
+  padding-bottom: 108px;
+  text-align: center;
+}
+
+.getintouch-section h3 {
+  font-size: 40px;
+  line-height: 42px;
+  color: $white_color;
+  font-weight: 400;
+}
+
+.getintouch-section h4 {
+  font-size: 24px;
+  line-height: 30px;
+  color: $grey_color;
+  margin-top: 15px;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $bg_color;
+}
+
+.footer_container {
+  margin: auto;
+  max-width: 1168px;
+}
+
+.footer-first_part {
+  @include center-flex;
+  align-items: normal;
+  margin-bottom: 26px;
+  margin-right: 102px;
+}
+
+.footer-flex-lists {
+  display: flex;
+}
+
+footer p {
+  color: $grey_color;
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 20px;
+}
+
+.footer-flex-lists ul {
+  font-size: 14px;
+  line-height: 20px;
+  list-style: none
+}
+
+.footer-flex-lists ul li {
+  margin-bottom: 10px;
+}
+
+.footer-flex-lists ul li a {
+  text-decoration: none;
+  display: inline-block;
+  color: $white_color;
+}
+
+.footer-flex-lists ul li:first-of-type {
+  @include large-headings;
+  color: $grey_color;
+  font: $main-font;
+}
+
+.footer-flex-lists ul:last-of-type {
+  margin-left: 55px;
+}
+
+.subscription {
+  @include center-flex;
+  padding: 36px 0;
+  border-bottom: solid 2px;
+  border-top: solid 2px;
+  border-color: $white_color;
+
+}
+
+.subscription h6 {
+  font: $main-font;
+  @include large-headings;
+  color: $white_color;
+}
+
+
+.subscription form {
+  @include center-flex;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  width: 458px;
+  height: 52px;
+}
+
+
+.subscription input {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  width: 370px;
+  height: 40px;
+  margin-left: 6px;
+}
+
+
+.subscription button {
+  background: $bg_color;
+  border-radius: 11px;
+  width: 63px;
+  height: 30px;
+  margin-right: 6px;
+}
+
+.subscription button:hover {
+  cursor: pointer;
+}
+
+.subscription button:active {
+  transform: translateY(2px);
+}
+
+.footer-ending {
+  @include center-flex;
+  margin-top: 36px;
+}
+
+.final-subscript {
+  font-size: 14px;
+}
+
+.licensing {
+  text-decoration: none;
+  color: $grey_color;
+  font-size: 13px;
+}
+
+.socials {
+  @include center-flex;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.social-3 {
+  margin-left: 26px;
+}
+
+.social-2 {
+  margin-left: 20px;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  border: none;
+  background-color: black;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+  border: none;
+  background-color: black;
+}
+
+.ui-accordion .ui-accordion-content {
+  background-color: black;
+  border: none;
+}
+
+.ui-icon {
+  transform: scale(2);
+}
+
+
