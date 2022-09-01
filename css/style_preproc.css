@@ -1,4 +1,4 @@
-@import "media.css";
+@import "nav-bar(mobile_and_desktop).css";
 @font-face {
   font-family: "Poppins";
   src: url("../fonts/Poppins-Regular.eot");
@@ -25,6 +25,11 @@ header {
   padding-bottom: 24px;
   background-color: #181818;
 }
+@media screen and (max-width: 1200px) {
+  header {
+    padding: 24px 15px;
+  }
+}
 
 .header_container {
   max-width: 1150px;
@@ -49,6 +54,32 @@ header {
   align-items: flex-end;
   padding-bottom: 71px;
 }
+@media screen and (max-width: 1200px) {
+  .main_banner {
+    height: 80vh;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main_banner {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main_banner {
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main_banner {
+    height: 50vh;
+    padding-bottom: 31px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main_banner {
+    height: 100vh;
+  }
+}
 .main_banner h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -56,27 +87,100 @@ header {
   color: #C0C0C0;
   font: 400 14px/20px "Poppins", sans-serif;
 }
+@media screen and (max-width: 992px) {
+  .main_banner h2 {
+    line-height: 16px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main_banner h2 {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main_banner h2 {
+    color: #FFFFFF;
+  }
+}
 .main_banner h1 {
   font-size: 54px;
   line-height: 59px;
   color: #FFFFFF;
   font-weight: 400;
 }
+@media screen and (max-width: 992px) {
+  .main_banner h1 {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main_banner h1 {
+    font-size: 27px;
+    line-height: 29px;
+  }
+}
 .main_banner p {
   margin-top: 18px;
   font: 400 14px/20px "Poppins", sans-serif;
   color: #C0C0C0;
+}
+@media screen and (max-width: 992px) {
+  .main_banner p {
+    margin-bottom: 18px;
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main_banner p {
+    font-size: 10px;
+    line-height: 10px;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .main_banner p {
+    max-width: 340px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .main_banner p {
+    max-width: 310px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .main_banner p {
+    max-width: 240px;
+  }
 }
 
 .main_banner_general-text {
   max-width: 580px;
   text-align: center;
 }
+@media screen and (max-width: 992px) {
+  .main_banner_general-text {
+    max-width: 480px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .main_banner_general-text {
+    max-width: 400px;
+  }
+}
 
 .photo_info_main_banner, .photo_info_fuji, .photo_info_monstera, .photo_info_himalayas {
   position: absolute;
   bottom: 40px;
   right: 40px;
+}
+@media screen and (max-width: 428px) {
+  .photo_info_main_banner, .photo_info_fuji, .photo_info_monstera, .photo_info_himalayas {
+    bottom: 21px;
+    right: 20px;
+  }
 }
 .photo_info_main_banner li, .photo_info_fuji li, .photo_info_monstera li, .photo_info_himalayas li {
   font-size: 12px;
@@ -94,6 +198,14 @@ header {
   width: 15px;
   background-image: url("../images/clock.svg");
 }
+@media screen and (max-width: 428px) {
+  .photo_info_main_banner li:first-of-type:before, .photo_info_fuji li:first-of-type:before, .photo_info_monstera li:first-of-type:before, .photo_info_himalayas li:first-of-type:before {
+    height: 8px;
+    width: 8px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
 .photo_info_main_banner li:nth-child(2):before, .photo_info_fuji li:nth-child(2):before, .photo_info_monstera li:nth-child(2):before, .photo_info_himalayas li:nth-child(2):before {
   content: "";
   margin-right: 6px;
@@ -101,6 +213,14 @@ header {
   height: 16px;
   width: 16px;
   background-image: url("../images/objective.svg");
+}
+@media screen and (max-width: 428px) {
+  .photo_info_main_banner li:nth-child(2):before, .photo_info_fuji li:nth-child(2):before, .photo_info_monstera li:nth-child(2):before, .photo_info_himalayas li:nth-child(2):before {
+    height: 8px;
+    width: 8px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
 }
 .photo_info_main_banner li:nth-child(3):before, .photo_info_fuji li:nth-child(3):before, .photo_info_monstera li:nth-child(3):before, .photo_info_himalayas li:nth-child(3):before {
   content: "";
@@ -110,6 +230,14 @@ header {
   width: 32px;
   background-image: url("../images/iso.svg");
 }
+@media screen and (max-width: 428px) {
+  .photo_info_main_banner li:nth-child(3):before, .photo_info_fuji li:nth-child(3):before, .photo_info_monstera li:nth-child(3):before, .photo_info_himalayas li:nth-child(3):before {
+    height: 8px;
+    width: 16px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
 .photo_info_main_banner li:last-of-type:before, .photo_info_fuji li:last-of-type:before, .photo_info_monstera li:last-of-type:before, .photo_info_himalayas li:last-of-type:before {
   content: "";
   margin-right: 6px;
@@ -118,10 +246,40 @@ header {
   width: 10px;
   background-image: url("../images/geo.svg");
 }
+@media screen and (max-width: 428px) {
+  .photo_info_main_banner li:last-of-type:before, .photo_info_fuji li:last-of-type:before, .photo_info_monstera li:last-of-type:before, .photo_info_himalayas li:last-of-type:before {
+    height: 8px;
+    width: 5px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 428px) {
+  .photo_info_main_banner li, .photo_info_fuji li, .photo_info_monstera li, .photo_info_himalayas li {
+    font-size: 8px;
+    line-height: 8px;
+    margin-left: 12px;
+  }
+}
 
 .what_we_do_container {
   max-width: 1168px;
   margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .what_we_do_container {
+    max-width: 1200px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .what_we_do_container {
+    max-width: 820px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .what_we_do_container {
+    max-width: 400px;
+  }
 }
 
 .what_we_do {
@@ -129,12 +287,36 @@ header {
   padding-bottom: 100px;
   background-color: black;
 }
+@media screen and (max-width: 1200px) {
+  .what_we_do {
+    padding-top: 56px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .what_we_do {
+    padding-top: 38px;
+    padding-bottom: 33px;
+  }
+}
 .what_we_do h2 {
   color: #FFFFFF;
   font-size: 40px;
   font-weight: 400;
   line-height: 42px;
   text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .what_we_do h2 {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .what_we_do h2 {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 .what_we_do h3 {
   margin-top: 15px;
@@ -145,11 +327,35 @@ header {
   line-height: 30px;
   text-align: center;
 }
-.what_we_do .d-flex {
+@media screen and (max-width: 992px) {
+  .what_we_do h3 {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .what_we_do h3 {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 7px 0 21px;
+  }
+}
+.what_we_do h3 .d-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+}
+@media screen and (max-width: 1200px) {
+  .what_we_do h3 .d-flex {
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 428px) {
+  .what_we_do h3 .d-flex {
+    display: block;
+    align-items: center;
+  }
 }
 .what_we_do .item {
   max-width: 576px;
@@ -159,6 +365,29 @@ header {
   margin-bottom: 16px;
   width: 100%;
   height: auto;
+}
+@media screen and (max-width: 1200px) {
+  .what_we_do .item {
+    max-width: 45%;
+    max-height: 45%;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .what_we_do .item {
+    max-width: 45%;
+    max-height: 45%;
+    margin-bottom: 24px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .what_we_do .item {
+    max-width: 576px;
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 16px;
+  }
 }
 .what_we_do .item img {
   display: block;
@@ -171,6 +400,16 @@ header {
   width: 100%;
   bottom: 30px;
 }
+@media screen and (max-width: 992px) {
+  .what_we_do .item .description {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    bottom: 20px;
+    font-size: 10px;
+    line-height: 13px;
+  }
+}
 .what_we_do .item .description h4 {
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -178,6 +417,11 @@ header {
   font: 400 14px/20px "Poppins", sans-serif;
   color: #FFFFFF;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 992px) {
+  .what_we_do .item .description h4 {
+    margin-bottom: 20px;
+  }
 }
 .what_we_do .item .description p {
   font: 400 14px/20px "Poppins", sans-serif;
@@ -198,12 +442,27 @@ header {
   padding-right: 10px;
   transition: 0.2s;
 }
+@media screen and (max-width: 992px) {
+  .btn {
+    font-size: 12px;
+    line-height: 12px;
+    padding-right: 10px;
+  }
+}
 .btn:before {
   content: "";
   background-image: url("../images/dot.svg");
   height: 32px;
   width: 32px;
   margin: 5px 6px 5px 4px;
+}
+@media screen and (max-width: 992px) {
+  .btn:before {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 16px;
+    width: 16px;
+  }
 }
 .btn:hover {
   transform: scale(1.1);
@@ -221,6 +480,22 @@ header {
   transform: scale(2);
 }
 
+@media screen and (max-width: 1200px) {
+  .fuji-section, .monstera-section, .himalayas-section {
+    min-height: 500px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .fuji-section, .monstera-section, .himalayas-section {
+    min-height: 450px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .fuji-section, .monstera-section, .himalayas-section {
+    min-height: 220px;
+  }
+}
+
 .fuji-section {
   background-image: url(../images/fuji_banner.jpg);
   background-size: cover;
@@ -235,18 +510,6 @@ header {
   max-width: 298px;
   line-height: 20px;
   margin-right: 62px;
-}
-
-.fuji-section_general_text h5, .monstera-section_general_text h5, .himalayas-section_general_text h5 {
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 400;
-  font: 400 14px/20px "Poppins", sans-serif;
-  color: #FFFFFF;
-}
-.fuji-section_general_text p, .monstera-section_general_text p, .himalayas-section_general_text p {
-  font: 400 14px/20px "Poppins", sans-serif;
-  color: #C0C0C0;
 }
 
 .monstera-section {
@@ -271,11 +534,41 @@ header {
   padding-top: 113px;
   padding-bottom: 140px;
 }
+@media screen and (max-width: 1200px) {
+  .past_clients {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .past_clients {
+    padding-top: 56px;
+    padding-bottom: 70px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .past_clients {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
 .past_clients h3 {
   font-size: 40px;
   line-height: 42px;
   color: #FFFFFF;
   font-weight: 400;
+}
+@media screen and (max-width: 992px) {
+  .past_clients h3 {
+    font-size: 27px;
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .past_clients h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 .past_clients h4 {
   margin-top: 15px;
@@ -284,11 +577,35 @@ header {
   color: #C0C0C0;
   font-weight: 400;
 }
+@media screen and (max-width: 992px) {
+  .past_clients h4 {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .past_clients h4 {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 
 .clients_logos {
   padding-top: 82px;
   max-width: 1168px;
   margin: auto;
+}
+@media screen and (max-width: 992px) {
+  .clients_logos {
+    padding-top: 41px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .clients_logos {
+    max-width: 730px;
+  }
 }
 .clients_logos a {
   max-width: 128px;
@@ -304,8 +621,13 @@ header {
 
 .owl-nav .owl-prev {
   position: absolute;
-  left: 0;
   top: 106px;
+  left: 0;
+}
+@media screen and (max-width: 992px) {
+  .owl-nav .owl-prev {
+    top: 67px;
+  }
 }
 .owl-nav .owl-prev:before {
   color: white;
@@ -318,6 +640,11 @@ header {
   position: absolute;
   top: 106px;
   right: 0;
+}
+@media screen and (max-width: 992px) {
+  .owl-nav .owl-next {
+    top: 67px;
+  }
 }
 .owl-nav .owl-next:before {
   color: white;
@@ -343,17 +670,82 @@ header {
   margin-right: 119px;
 }
 
+@media screen and (max-width: 992px) {
+  .fuji-section_general_text, .monstera-section_general_text, .himalayas-section_general_text {
+    max-width: 250px;
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .fuji-section_general_text, .monstera-section_general_text, .himalayas-section_general_text {
+    max-width: 222px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .fuji-section_general_text, .monstera-section_general_text, .himalayas-section_general_text {
+    max-width: 180px;
+    margin-right: 20px;
+  }
+}
+.fuji-section_general_text h5, .monstera-section_general_text h5, .himalayas-section_general_text h5 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font: 400 14px/20px "Poppins", sans-serif;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 992px) {
+  .fuji-section_general_text h5, .monstera-section_general_text h5, .himalayas-section_general_text h5 {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .fuji-section_general_text h5, .monstera-section_general_text h5, .himalayas-section_general_text h5 {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}
+.fuji-section_general_text p, .monstera-section_general_text p, .himalayas-section_general_text p {
+  font: 400 14px/20px "Poppins", sans-serif;
+  color: #C0C0C0;
+}
+@media screen and (max-width: 992px) {
+  .fuji-section_general_text p, .monstera-section_general_text p, .himalayas-section_general_text p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
 .getintouch-section {
   background-color: #000000;
   padding-top: 113px;
   padding-bottom: 108px;
   text-align: center;
 }
+@media screen and (max-width: 992px) {
+  .getintouch-section {
+    padding-top: 56px;
+    padding-bottom: 54px;
+  }
+}
 .getintouch-section h3 {
   font-size: 40px;
   line-height: 42px;
   color: #FFFFFF;
   font-weight: 400;
+}
+@media screen and (max-width: 992px) {
+  .getintouch-section h3 {
+    font-size: 27px;
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .getintouch-section h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 .getintouch-section h4 {
   font-size: 24px;
@@ -363,11 +755,30 @@ header {
   margin-bottom: 22px;
   font-weight: 400;
 }
+@media screen and (max-width: 992px) {
+  .getintouch-section h4 {
+    margin-top: 10px;
+    font-size: 17px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .getintouch-section h4 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
 
 footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #000000;
+}
+@media screen and (max-width: 428px) {
+  footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 footer p {
   color: #C0C0C0;
@@ -380,6 +791,17 @@ footer p {
   margin: auto;
   max-width: 1168px;
 }
+@media screen and (max-width: 1200px) {
+  .footer_container {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer_container {
+    max-width: 730px;
+  }
+}
 
 .footer-first_part {
   display: flex;
@@ -389,9 +811,37 @@ footer p {
   margin-bottom: 26px;
   margin-right: 102px;
 }
+@media screen and (max-width: 992px) {
+  .footer-first_part {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .footer-first_part {
+    display: block;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  .footer-first_part p {
+    max-width: 220px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .footer-first_part p {
+    max-width: 380px;
+  }
+}
 
 .footer-flex-lists {
   display: flex;
+}
+@media screen and (max-width: 390px) {
+  .footer-flex-lists {
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-right: 40px;
+  }
 }
 .footer-flex-lists ul {
   font-size: 14px;
@@ -416,6 +866,11 @@ footer p {
 .footer-flex-lists ul:last-of-type {
   margin-left: 55px;
 }
+@media screen and (max-width: 428px) {
+  .footer-flex-lists ul:first-of-type {
+    margin-left: 40px;
+  }
+}
 
 .subscription {
   display: flex;
@@ -425,6 +880,16 @@ footer p {
   border-bottom: solid 2px;
   border-top: solid 2px;
   border-color: #FFFFFF;
+}
+@media screen and (max-width: 428px) {
+  .subscription {
+    display: block;
+  }
+}
+@media screen and (max-width: 428px) {
+  .subscription p {
+    margin-bottom: 36px;
+  }
 }
 .subscription h6 {
   font: 400 14px/20px "Poppins", sans-serif;
@@ -443,6 +908,32 @@ footer p {
   width: 458px;
   height: 52px;
 }
+@media screen and (max-width: 768px) {
+  .subscription form {
+    width: 384px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .subscription form {
+    width: 360px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .subscription form {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .subscription form {
+    margin: auto;
+    width: 280px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .subscription form {
+    width: 240px;
+  }
+}
 .subscription input {
   border: none;
   box-shadow: none;
@@ -450,6 +941,31 @@ footer p {
   width: 370px;
   height: 40px;
   margin-left: 6px;
+}
+@media screen and (max-width: 768px) {
+  .subscription input {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .subscription input {
+    width: 270px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .subscription input {
+    width: 250px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .subscription input {
+    width: 190px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .subscription input {
+    width: 150px;
+  }
 }
 .subscription button {
   background: #000000;
@@ -475,11 +991,27 @@ footer p {
 .final-subscript {
   font-size: 14px;
 }
+@media screen and (max-width: 428px) {
+  .final-subscript {
+    max-width: 220px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .final-subscript {
+    font-size: 10px;
+    max-width: 146px;
+  }
+}
 
 .licensing {
   text-decoration: none;
   color: #C0C0C0;
   font-size: 13px;
+}
+@media screen and (max-width: 320px) {
+  .licensing {
+    font-size: 9px;
+  }
 }
 
 .socials {
