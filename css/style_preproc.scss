@@ -80,7 +80,7 @@ $grey_color: #C0C0C0;
 }
 
 @mixin max-screen-height($res) {
-  @media screen and (max-width: $res) {
+  @media screen and (max-height: $res) {
     @content;
   }
 }
@@ -477,18 +477,6 @@ header {
   transform: scale(2);
 }
 
-.fuji-section, .monstera-section, .himalayas-section {
-  @include max-screen-width(1200px) {
-    min-height: 500px;
-  }
-  @include max-screen-width(992px) {
-    min-height: 450px;
-  }
-  @include max-screen-width(428px) {
-    min-height: 220px;
-  }
-}
-
 .fuji-section {
   background-image: url(../images/fuji_banner.jpg);
   @include photo-sections;
@@ -660,6 +648,18 @@ header {
       font-size: 10px;
       line-height: 14px;
     }
+  }
+}
+
+.fuji-section, .monstera-section, .himalayas-section {
+  @include max-screen-width(1200px) {
+    min-height: 500px;
+  }
+  @include max-screen-width(992px) {
+    min-height: 450px;
+  }
+  @include max-screen-width(428px) {
+    min-height: 220px;
   }
 }
 

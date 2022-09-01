@@ -75,7 +75,7 @@ header {
     padding-bottom: 31px;
   }
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-height: 428px) {
   .main_banner {
     height: 100vh;
   }
@@ -99,7 +99,7 @@ header {
     line-height: 10px;
   }
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-height: 428px) {
   .main_banner h2 {
     color: #FFFFFF;
   }
@@ -480,22 +480,6 @@ header {
   transform: scale(2);
 }
 
-@media screen and (max-width: 1200px) {
-  .fuji-section, .monstera-section, .himalayas-section {
-    min-height: 500px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .fuji-section, .monstera-section, .himalayas-section {
-    min-height: 450px;
-  }
-}
-@media screen and (max-width: 428px) {
-  .fuji-section, .monstera-section, .himalayas-section {
-    min-height: 220px;
-  }
-}
-
 .fuji-section {
   background-image: url(../images/fuji_banner.jpg);
   background-size: cover;
@@ -714,6 +698,22 @@ header {
   .fuji-section_general_text p, .monstera-section_general_text p, .himalayas-section_general_text p {
     font-size: 10px;
     line-height: 14px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .fuji-section, .monstera-section, .himalayas-section {
+    min-height: 500px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .fuji-section, .monstera-section, .himalayas-section {
+    min-height: 450px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .fuji-section, .monstera-section, .himalayas-section {
+    min-height: 220px;
   }
 }
 
