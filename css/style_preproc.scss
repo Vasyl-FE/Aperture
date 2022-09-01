@@ -289,11 +289,8 @@ header {
 }
 
 .what_we_do_container {
-  max-width: 1168px;
+  max-width: 1200px;
   margin: auto;
-  @include max-screen-width(1200px) {
-    max-width: 1200px;
-  }
   @include max-screen-width(992px) {
     max-width: 820px;
   }
@@ -313,6 +310,18 @@ header {
   @include max-screen-width(428px) {
     padding-top: 38px;
     padding-bottom: 33px;
+  }
+
+  .d-flex {
+    @include center-flex;
+    flex-wrap: nowrap;
+    @include max-screen-width(1200px) {
+      justify-content: space-evenly;
+    }
+    @include max-screen-width(428px) {
+      display: block;
+      align-items: center;
+    }
   }
 
   h2 {
@@ -348,19 +357,8 @@ header {
       line-height: 16px;
       margin: 7px 0 21px;
     }
-
-    .d-flex {
-      @include center-flex;
-      flex-wrap: nowrap;
-      @include max-screen-width(1200px) {
-        justify-content: space-evenly;
-      }
-      @include max-screen-width(428px) {
-        display: block;
-        align-items: center;
-      }
-    }
   }
+
 
   .item {
     max-width: 576px;
