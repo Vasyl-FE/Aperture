@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: Poppins, sans-serif;
+  font: 400 14px/20px "Poppins", sans-serif;
   overflow-x: hidden;
   width: 100%;
   z-index: 1;
@@ -52,8 +52,9 @@ header {
 .main_banner h2 {
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 400;
   color: #C0C0C0;
-  font: Poppins, sans-serif 14px/20px 400;
+  font: 400 14px/20px "Poppins", sans-serif;
 }
 .main_banner h1 {
   font-size: 54px;
@@ -63,8 +64,7 @@ header {
 }
 .main_banner p {
   margin-top: 18px;
-  font-size: 14px;
-  line-height: 20px;
+  font: 400 14px/20px "Poppins", sans-serif;
   color: #C0C0C0;
 }
 
@@ -129,7 +129,6 @@ header {
   padding-bottom: 100px;
   background-color: black;
 }
-
 .what_we_do h2 {
   color: #FFFFFF;
   font-size: 40px;
@@ -137,7 +136,6 @@ header {
   line-height: 42px;
   text-align: center;
 }
-
 .what_we_do h3 {
   margin-top: 15px;
   margin-bottom: 42px;
@@ -147,46 +145,42 @@ header {
   line-height: 30px;
   text-align: center;
 }
-
-.what_we_do .item {
-  max-width: 576px;
-  max-height: 600px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 16px;
-  width: 100%;
-  height: auto;
-}
-
 .what_we_do .d-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
 }
-
+.what_we_do .item {
+  max-width: 576px;
+  max-height: 590px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 16px;
+  width: 100%;
+  height: auto;
+}
 .what_we_do .item img {
   display: block;
   width: 100%;
 }
-
 .what_we_do .item .description {
-  font: Poppins, sans-serif 14px/20px 400;
   position: absolute;
   padding-left: 30px;
   padding-right: 30px;
   width: 100%;
   bottom: 30px;
 }
-
 .what_we_do .item .description h4 {
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 400;
+  font: 400 14px/20px "Poppins", sans-serif;
   color: #FFFFFF;
   margin-bottom: 30px;
 }
-
 .what_we_do .item .description p {
+  font: 400 14px/20px "Poppins", sans-serif;
   color: #C0C0C0;
   margin-bottom: 17px;
 }
@@ -204,7 +198,6 @@ header {
   padding-right: 10px;
   transition: 0.2s;
 }
-
 .btn:before {
   content: "";
   background-image: url("../images/dot.svg");
@@ -212,13 +205,20 @@ header {
   width: 32px;
   margin: 5px 6px 5px 4px;
 }
-
 .btn:hover {
   transform: scale(1.1);
 }
-
 .btn:active {
   transform: translate(1px);
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active, .ui-accordion .ui-accordion-content {
+  border: none;
+  background-color: black;
+}
+
+.ui-icon {
+  transform: scale(2);
 }
 
 .fuji-section {
@@ -237,14 +237,15 @@ header {
   margin-right: 62px;
 }
 
-.photo_info_fuji h5, .photo_info_monstera h5, .photo_info_himalayas h5 {
+.fuji-section_general_text h5, .monstera-section_general_text h5, .himalayas-section_general_text h5 {
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 400;
+  font: 400 14px/20px "Poppins", sans-serif;
   color: #FFFFFF;
-  font: Poppins, sans-serif 14px/20px 400;
 }
-.photo_info_fuji p, .photo_info_monstera p, .photo_info_himalayas p {
-  font: Poppins, sans-serif 14px/20px 400;
+.fuji-section_general_text p, .monstera-section_general_text p, .himalayas-section_general_text p {
+  font: 400 14px/20px "Poppins", sans-serif;
   color: #C0C0C0;
 }
 
@@ -270,14 +271,12 @@ header {
   padding-top: 113px;
   padding-bottom: 140px;
 }
-
 .past_clients h3 {
   font-size: 40px;
   line-height: 42px;
   color: #FFFFFF;
   font-weight: 400;
 }
-
 .past_clients h4 {
   margin-top: 15px;
   font-size: 24px;
@@ -291,7 +290,6 @@ header {
   max-width: 1168px;
   margin: auto;
 }
-
 .clients_logos a {
   max-width: 128px;
   display: inline-block;
@@ -309,21 +307,18 @@ header {
   left: 0;
   top: 106px;
 }
-
-.owl-prev:before {
+.owl-nav .owl-prev:before {
   color: white;
   font-size: 30px;
   font-family: "Font Awesome 6 Free", sans-serif;
   font-weight: 900;
   content: "\f053";
 }
-
 .owl-nav .owl-next {
   position: absolute;
   top: 106px;
   right: 0;
 }
-
 .owl-nav .owl-next:before {
   color: white;
   font-size: 30px;
@@ -354,14 +349,12 @@ header {
   padding-bottom: 108px;
   text-align: center;
 }
-
 .getintouch-section h3 {
   font-size: 40px;
   line-height: 42px;
   color: #FFFFFF;
   font-weight: 400;
 }
-
 .getintouch-section h4 {
   font-size: 24px;
   line-height: 30px;
@@ -375,6 +368,12 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: #000000;
+}
+footer p {
+  color: #C0C0C0;
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 20px;
 }
 
 .footer_container {
@@ -394,37 +393,26 @@ footer {
 .footer-flex-lists {
   display: flex;
 }
-
-footer p {
-  color: #C0C0C0;
-  font-size: 13px;
-  line-height: 20px;
-  margin-top: 20px;
-}
-
 .footer-flex-lists ul {
   font-size: 14px;
   line-height: 20px;
   list-style: none;
 }
-
 .footer-flex-lists ul li {
   margin-bottom: 10px;
 }
-
 .footer-flex-lists ul li a {
   text-decoration: none;
   display: inline-block;
   color: #FFFFFF;
 }
-
 .footer-flex-lists ul li:first-of-type {
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 400;
   color: #C0C0C0;
-  font: Poppins, sans-serif 14px/20px 400;
+  font: 400 14px/20px "Poppins", sans-serif;
 }
-
 .footer-flex-lists ul:last-of-type {
   margin-left: 55px;
 }
@@ -438,14 +426,13 @@ footer p {
   border-top: solid 2px;
   border-color: #FFFFFF;
 }
-
 .subscription h6 {
-  font: Poppins, sans-serif 14px/20px 400;
+  font: 400 14px/20px "Poppins", sans-serif;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 400;
   color: #FFFFFF;
 }
-
 .subscription form {
   display: flex;
   justify-content: space-between;
@@ -456,7 +443,6 @@ footer p {
   width: 458px;
   height: 52px;
 }
-
 .subscription input {
   border: none;
   box-shadow: none;
@@ -465,7 +451,6 @@ footer p {
   height: 40px;
   margin-left: 6px;
 }
-
 .subscription button {
   background: #000000;
   border-radius: 11px;
@@ -473,11 +458,9 @@ footer p {
   height: 30px;
   margin-right: 6px;
 }
-
 .subscription button:hover {
   cursor: pointer;
 }
-
 .subscription button:active {
   transform: translateY(2px);
 }
@@ -513,25 +496,6 @@ footer p {
 
 .social-2 {
   margin-left: 20px;
-}
-
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-  border: none;
-  background-color: black;
-}
-
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
-  border: none;
-  background-color: black;
-}
-
-.ui-accordion .ui-accordion-content {
-  background-color: black;
-  border: none;
-}
-
-.ui-icon {
-  transform: scale(2);
 }
 
 /*# sourceMappingURL=style_preproc.css.map */

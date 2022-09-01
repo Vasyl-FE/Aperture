@@ -13,7 +13,7 @@
 
 @import "media.css";
 
-$main_font: Poppins, sans-serif 14px/20px 400;
+$main_font: 400 14px/20px "Poppins", sans-serif;
 $bg_color: #000000;
 $white_color: #FFFFFF;
 $grey_color: #C0C0C0;
@@ -28,6 +28,7 @@ $grey_color: #C0C0C0;
 @mixin large-headings {
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 @mixin positioned_photo-info {
@@ -72,17 +73,13 @@ $grey_color: #C0C0C0;
   top: 106px;
 }
 
-
-//ampersands for pseudoclasses or pseudoelements!
-
-
-//@mixin max-screen($res)
-//{
-//  @media screen and (max-width: $res)
-//  {
-//    @content;
-//  }
-//}
+@mixin max-screen($res)
+{
+  @media screen and (max-width: $res)
+  {
+    @content;
+  }
+}
 
 
 * {
@@ -92,7 +89,7 @@ $grey_color: #C0C0C0;
 }
 
 body {
-  font-family: Poppins, sans-serif;
+  font: $main_font;
   overflow-x: hidden;
   width: 100%;
   z-index: 1;
@@ -140,8 +137,7 @@ header {
 
   p {
     margin-top: 18px;
-    font-size: 14px;
-    line-height: 20px;
+    font: $main_font;
     color: $grey_color;
   }
 }
@@ -202,65 +198,64 @@ header {
   padding-bottom: 100px;
   background-color: black;
 
-}
+  h2 {
+    color: $white_color;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 42px;
+    text-align: center;
+  }
 
+  h3 {
+    margin-top: 15px;
+    margin-bottom: 42px;
+    color: $grey_color;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 30px;
+    text-align: center;
+  }
 
-.what_we_do h2 {
-  color: $white_color;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 42px;
-  text-align: center;
-}
+  .d-flex {
+    @include center-flex;
+    flex-wrap: nowrap;
+  }
 
-.what_we_do h3 {
-  margin-top: 15px;
-  margin-bottom: 42px;
-  color: $grey_color;
-  font-weight: 400;
-  font-size: 23px;
-  line-height: 30px;
-  text-align: center;
-}
+  .item {
+    max-width: 576px;
+    max-height: 590px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 16px;
+    width: 100%;
+    height: auto;
 
-.what_we_do .item {
-  max-width: 576px;
-  max-height: 600px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 16px;
-  width: 100%;
-  height: auto;
-}
+    img {
+      display: block;
+      width: 100%;
+    }
 
-.what_we_do .d-flex {
-  @include center-flex;
-  flex-wrap: nowrap;
-}
+    .description {
+      position: absolute;
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 100%;
+      bottom: 30px;
 
-.what_we_do .item img {
-  display: block;
-  width: 100%;
-}
+      h4 {
+        @include large-headings;
+        font: $main_font;
+        color: $white_color;
+        margin-bottom: 30px;
+      }
 
-.what_we_do .item .description {
-  font: $main_font;
-  position: absolute;
-  padding-left: 30px;
-  padding-right: 30px;
-  width: 100%;
-  bottom: 30px;
-}
-
-.what_we_do .item .description h4 {
-  @include large-headings;
-  color: $white_color;
-  margin-bottom: 30px;
-}
-
-.what_we_do .item .description p {
-  color: $grey_color;
-  margin-bottom: 17px;
+      p {
+        font: $main_font;
+        color: $grey_color;
+        margin-bottom: 17px;
+      }
+    }
+  }
 }
 
 .btn {
@@ -275,24 +270,32 @@ header {
   letter-spacing: 0.4px;
   padding-right: 10px;
   transition: 0.2s;
+
+  &:before {
+    content: "";
+    background-image: url("../images/dot.svg");
+    height: 32px;
+    width: 32px;
+    margin: 5px 6px 5px 4px;
+  }
+
+  &:hover {
+    transform: scale(1.1)
+  }
+
+  &:active {
+    transform: translate(1px);
+  }
 }
 
-.btn:before {
-  content: "";
-  background-image: url("../images/dot.svg");
-  height: 32px;
-  width: 32px;
-  margin: 5px 6px 5px 4px;
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active, .ui-accordion .ui-accordion-content {
+  border: none;
+  background-color: black;
 }
 
-.btn:hover {
-  transform: scale(1.1)
+.ui-icon {
+  transform: scale(2);
 }
-
-.btn:active {
-  transform: translate(1px);
-}
-
 
 .fuji-section {
   background-image: url(../images/fuji_banner.jpg);
@@ -306,11 +309,11 @@ header {
   margin-right: 62px;
 }
 
-.photo_info_fuji, .photo_info_monstera, .photo_info_himalayas {
+.fuji-section_general_text, .monstera-section_general_text, .himalayas-section_general_text {
   h5 {
     @include large-headings;
-    color: $white_color;
     font: $main_font;
+    color: $white_color;
   }
 
   p {
@@ -318,7 +321,6 @@ header {
     color: $grey_color;
   }
 }
-
 
 .monstera-section {
   background-image: url(../images/monstera_banner.jpg);
@@ -336,32 +338,32 @@ header {
   text-align: center;
   padding-top: 113px;
   padding-bottom: 140px;
-}
 
-.past_clients h3 {
-  font-size: 40px;
-  line-height: 42px;
-  color: $white_color;
-  font-weight: 400;
-}
+  h3 {
+    font-size: 40px;
+    line-height: 42px;
+    color: $white_color;
+    font-weight: 400;
+  }
 
-.past_clients h4 {
-  margin-top: 15px;
-  font-size: 24px;
-  line-height: 30px;
-  color: $grey_color;
-  font-weight: 400;
+  h4 {
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 30px;
+    color: $grey_color;
+    font-weight: 400;
+  }
 }
 
 .clients_logos {
   padding-top: 82px;
   max-width: 1168px;
   margin: auto;
-}
 
-.clients_logos a {
-  max-width: 128px;
-  display: inline-block;
+  a {
+    max-width: 128px;
+    display: inline-block;
+  }
 }
 
 .owl-stage {
@@ -369,27 +371,28 @@ header {
   text-align: center;
 }
 
-.owl-nav .owl-prev {
-  position: absolute;
-  left: 0;
-  top: 106px;
-}
+.owl-nav {
+  .owl-prev {
+    position: absolute;
+    left: 0;
+    top: 106px;
 
-.owl-prev:before {
-  @include carousel-arrows;
-  content: "\f053";
-}
+    &:before {
+      @include carousel-arrows;
+      content: "\f053";
+    }
+  }
 
-.owl-nav .owl-next {
-  @include arrows-y;
-  right: 0;
-}
+  .owl-next {
+    @include arrows-y;
+    right: 0;
 
-.owl-nav .owl-next:before {
-  @include carousel-arrows;
-  content: "\f054";
+    &:before {
+      @include carousel-arrows;
+      content: "\f054";
+    }
+  }
 }
-
 
 .himalayas-section {
   @include photo-sections;
@@ -407,28 +410,35 @@ header {
   padding-top: 113px;
   padding-bottom: 108px;
   text-align: center;
-}
 
-.getintouch-section h3 {
-  font-size: 40px;
-  line-height: 42px;
-  color: $white_color;
-  font-weight: 400;
-}
+  h3 {
+    font-size: 40px;
+    line-height: 42px;
+    color: $white_color;
+    font-weight: 400;
+  }
 
-.getintouch-section h4 {
-  font-size: 24px;
-  line-height: 30px;
-  color: $grey_color;
-  margin-top: 15px;
-  margin-bottom: 22px;
-  font-weight: 400;
+  h4 {
+    font-size: 24px;
+    line-height: 30px;
+    color: $grey_color;
+    margin-top: 15px;
+    margin-bottom: 22px;
+    font-weight: 400;
+  }
 }
 
 footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: $bg_color;
+
+  p {
+    color: $grey_color;
+    font-size: 13px;
+    line-height: 20px;
+    margin-top: 20px;
+  }
 }
 
 .footer_container {
@@ -445,39 +455,32 @@ footer {
 
 .footer-flex-lists {
   display: flex;
-}
 
-footer p {
-  color: $grey_color;
-  font-size: 13px;
-  line-height: 20px;
-  margin-top: 20px;
-}
+  ul {
+    font-size: 14px;
+    line-height: 20px;
+    list-style: none;
 
-.footer-flex-lists ul {
-  font-size: 14px;
-  line-height: 20px;
-  list-style: none
-}
+    li {
+      margin-bottom: 10px;
 
-.footer-flex-lists ul li {
-  margin-bottom: 10px;
-}
+      a {
+        text-decoration: none;
+        display: inline-block;
+        color: $white_color;
+      }
 
-.footer-flex-lists ul li a {
-  text-decoration: none;
-  display: inline-block;
-  color: $white_color;
-}
+      &:first-of-type {
+        @include large-headings;
+        color: $grey_color;
+        font: $main-font;
+      }
+    }
 
-.footer-flex-lists ul li:first-of-type {
-  @include large-headings;
-  color: $grey_color;
-  font: $main-font;
-}
-
-.footer-flex-lists ul:last-of-type {
-  margin-left: 55px;
+    &:last-of-type {
+      margin-left: 55px;
+    }
+  }
 }
 
 .subscription {
@@ -487,49 +490,45 @@ footer p {
   border-top: solid 2px;
   border-color: $white_color;
 
-}
+  h6 {
+    font: $main-font;
+    @include large-headings;
+    color: $white_color;
+  }
 
-.subscription h6 {
-  font: $main-font;
-  @include large-headings;
-  color: $white_color;
-}
+  form {
+    @include center-flex;
+    background: #F9FAFB;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    width: 458px;
+    height: 52px;
+  }
 
+  input {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    width: 370px;
+    height: 40px;
+    margin-left: 6px;
+  }
 
-.subscription form {
-  @include center-flex;
-  background: #F9FAFB;
-  border: 1px solid #E5E7EB;
-  border-radius: 12px;
-  width: 458px;
-  height: 52px;
-}
+  button {
+    background: $bg_color;
+    border-radius: 11px;
+    width: 63px;
+    height: 30px;
+    margin-right: 6px;
 
+    &:hover {
+      cursor: pointer;
+    }
 
-.subscription input {
-  border: none;
-  box-shadow: none;
-  background-color: transparent;
-  width: 370px;
-  height: 40px;
-  margin-left: 6px;
-}
-
-
-.subscription button {
-  background: $bg_color;
-  border-radius: 11px;
-  width: 63px;
-  height: 30px;
-  margin-right: 6px;
-}
-
-.subscription button:hover {
-  cursor: pointer;
-}
-
-.subscription button:active {
-  transform: translateY(2px);
+    &:active {
+      transform: translateY(2px);
+    }
+  }
 }
 
 .footer-ending {
@@ -561,23 +560,7 @@ footer p {
   margin-left: 20px;
 }
 
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
-  border: none;
-  background-color: black;
-}
 
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
-  border: none;
-  background-color: black;
-}
 
-.ui-accordion .ui-accordion-content {
-  background-color: black;
-  border: none;
-}
-
-.ui-icon {
-  transform: scale(2);
-}
 
 
