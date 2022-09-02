@@ -369,6 +369,9 @@ header {
     width: 100%;
     height: auto;
     transition: 0.5s;
+    border: none;
+    box-shadow: none;
+    outline: none;
     //@include max-screen-width(1200px) {
     //  max-width: 45%;
     //  max-height: 45%;
@@ -389,7 +392,6 @@ header {
 
     &:hover {
       transform: scale(1.03);
-      border-color: $bg_color;
     }
 
     img {
@@ -484,6 +486,11 @@ header {
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active, .ui-accordion .ui-accordion-content {
   border: none;
   background-color: $bg_color;
+}
+
+.ui-widget-content {
+  border: none;
+  background: $bg_color;
 }
 
 .ui-accordion .ui-accordion-content {
